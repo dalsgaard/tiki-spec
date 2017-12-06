@@ -1,0 +1,19 @@
+{
+  "name": "tiki-test",
+  "version": "0.0.1",
+  "description": "Simple BDD style test framework.",
+  "main": "index.mjs",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "unit-test",
+    "spec",
+    "bdd"
+  ],
+  "author": "",
+  "license": "ISC"
+}
