@@ -1,5 +1,4 @@
-import assert from 'assert';
-import { describe, it, before, run } from '../index.mjs';
+import { describe, it, before, run, assert } from '../index.mjs';
 
 function later (value) {
   return new Promise (resolve => {
