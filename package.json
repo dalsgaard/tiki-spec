@@ -1,5 +1,5 @@
 {
-  "name": "tiki-test",
+  "name": "tiki-spec",
   "version": "0.0.1",
   "description": "Simple BDD style test framework.",
   "main": "index.mjs",
@@ -14,6 +14,8 @@
     "spec",
     "bdd"
   ],
-  "author": "",
+  "homepage": "https://github.com/dalsgaard/tiki-spec",
+  "repository": "github:dalsgaard/tiki-spec",
+  "author": "Kim Dalsgaard <kim@kimdalsgaard.com>",
   "license": "ISC"
 }
