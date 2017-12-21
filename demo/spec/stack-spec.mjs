@@ -1,20 +1,6 @@
-import { describe, it, before, run, assert } from '../index.mjs';
+import { describe, it, before, expect } from '../..';
+import { Stack } from '../src/stack';
 
-function later (value) {
-  return new Promise (resolve => {
-    process.nextTick(() => {
-      resolve(value);
-    });
-  });
-}
-
-class Stack extends Array {
-
-  async empty () {
-    return later(!!(this.length == 0));
-  }
-
-}
 
 describe('A stack', () => {
   let stack;
@@ -26,12 +12,12 @@ describe('A stack', () => {
   describe('An empty stack', () => {
 
     it.should('have a length of 0', () => {
-      assert.equal(0, stack.length);
+      expect(stack.length).to.equal(0);
     });
 
     it.should('be empty', async () => {
       const empty = await stack.empty();
-      assert.equal(true, empty);
+      expect(empty).to.be.true;
     });
 
   });
@@ -44,18 +30,18 @@ describe('A stack', () => {
     });
 
     it.should('have a length of 1', () => {
-      assert.equal(1, stack.length);
+      expect(stack.length).to.equal(1);
     });
 
     it.should('not be empty', async () => {
       const empty = await stack.empty();
-      assert.equal(false, empty);
+      expect(empty).to.be.false;
     });
 
     describe('Popping', () => {
       
       it.should('return the last element', () => {
-        assert.equal(pushed, stack.pop());
+        expect(stack.pop()).to.equal(pushed);
       });
   
     });  
@@ -67,7 +53,7 @@ describe('A stack', () => {
       });
 
       it.should('have a length of 0', () => {
-        assert.equal(0, stack.length);
+        expect(stack.length).to.equal(0);
       });
   
     });  
@@ -80,5 +66,3 @@ describe('A stack', () => {
   });
 
 });
-
-run();
