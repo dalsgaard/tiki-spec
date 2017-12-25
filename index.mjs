@@ -1,6 +1,6 @@
 import  assert  from 'assert';
 
-export { run } from './lib/collection';
-export { describe, it, before, after } from './lib/bdd';
-export { expect } from './lib/expect';
+export * from './lib/collection';
+export * from './lib/bdd';
+export * from './lib/expect';
 export { assert };
